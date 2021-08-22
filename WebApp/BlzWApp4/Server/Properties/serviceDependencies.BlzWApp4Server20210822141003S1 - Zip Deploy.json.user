@@ -1,0 +1,48 @@
+{
+  "dependencies": {
+    "storage1": {
+      "restored": true,
+      "restoreTime": "2021-08-22T11:13:35.2726011Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-08-22T11:12:43.6782674Z"
+    },
+    "appInsights1": {
+      "restored": true,
+      "restoreTime": "2021-08-22T11:12:07.585847Z"
+    }
+  },
+  "parameters": {
+    "storage1.resourceGroupName": {
+      "Name": "storage1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg_blobsttbl_diplom1"
+    },
+    "appInsights1.subscriptionId": {
+      "Name": "appInsights1.subscriptionId",
+      "Type": "subscription",
+      "Value": "5e4c91fa-85b7-4cdf-8eb6-bf792337dbb9"
+    },
+    "storage1.subscriptionId": {
+      "Name": "storage1.subscriptionId",
+      "Type": "subscription",
+      "Value": "5e4c91fa-85b7-4cdf-8eb6-bf792337dbb9"
+    },
+    "appInsights1.resourceGroupName": {
+      "Name": "appInsights1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg-diplom4"
+    },
+    "secrets1.resourceGroupName": {
+      "Name": "secrets1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "rg_blobsttbl_diplom1"
+    },
+    "secrets1.subscriptionId": {
+      "Name": "secrets1.subscriptionId",
+      "Type": "subscription",
+      "Value": "5e4c91fa-85b7-4cdf-8eb6-bf792337dbb9"
+    }
+  }
+}

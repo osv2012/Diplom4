@@ -1,0 +1,51 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+    private int nMode = 1;
+
+    private void IncrementCount()
+    {
+
+        string sBaseUrl = @"https://azfuncdiplom5app1.azurewebsites.net/api/AzFunc5?code=balWKHaqgq8U66btxzGAXv7cUAJoBJfu/xaJUKncdLXV7oVMddDJUg==&mode=";
+
+        //string sBaseUrl = @"http://localhost:7071/api/AzFunc5?mode=";
+
+        if (nMode == 0)
+        {
+            nMode = 1;
+        }
+        else
+        {
+            nMode = 0;
+        }
+
+        var sMode = nMode.ToString();
+
+        string sUrl = sBaseUrl + sMode;
+
+        try
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                var response = client.GetAsync(sUrl).Result;
+                var result = response.Content.ReadAsStream();
+            }
+            //currentCount++;
+        }
+        catch (Exception ex)
+        {
+            string s = ex.Message;
+            //throw;
+        }
+        currentCount++;
+
+    }
+
+}
