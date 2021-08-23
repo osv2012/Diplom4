@@ -46,14 +46,14 @@ namespace AzFunc5
         
         public DayDataRepository(ILogger log)
         {
-            string mi_clientId = "d42926b7-9465-4672-b69d-1b31f8f9f6bf";
+            string mi_clientId = "";
             var credential = new DefaultAzureCredential(new DefaultAzureCredentialOptions { ManagedIdentityClientId = mi_clientId });
 
             log.LogInformation("DefaultAzureCredential is OK");
 
-            string keyvault_name = "kvblobtbldiplom1";
+            string keyvault_name = "";
             string keyVaultUrl = "https://kvblobtbldiplom1.vault.azure.net/";
-            string secret_name = "storageAccountKey";
+            string secret_name = "";
 
             var kvclient = new SecretClient(vaultUri: new Uri(keyVaultUrl), credential: credential);
             log.LogInformation("SecretClient is OK");
@@ -61,9 +61,9 @@ namespace AzFunc5
             var secret = (kvclient.GetSecret(secret_name)).Value.Value;
 
             string storageUri = "https://staccblobtbldiplom2.table.core.windows.net/tableabc1";
-            string tableName = "tableabc1";
-            string accountName = "staccblobtbldiplom2";
-            string storageAccountKey = secret; //"cLYC5DgcKfpJNbmUe2xV6JbQogavNiOQNS3S2FP++CnXXmgKD9U+FJe17UL++vdZpTXbAmNMmAjZzvPWqbt26A==";
+            string tableName = "";
+            string accountName = "";
+            string storageAccountKey = secret; 
             DayDataTableCient = new TableClient(new Uri(storageUri),
                 tableName,
                 new TableSharedKeyCredential(accountName, storageAccountKey)

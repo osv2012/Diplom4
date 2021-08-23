@@ -41,9 +41,9 @@ namespace BlzWApp4.Server.Controllers
                  }
             };
 
-            string mi_clientId = "d42926b7-9465-4672-b69d-1b31f8f9f6bf";
+            string mi_clientId = "";
             //string keyvault_name = "kvblobtbldiplom1";
-            string secret_name = "storageAccountKey";
+            string secret_name = "";
 
             var credential = new DefaultAzureCredential(new DefaultAzureCredentialOptions { ManagedIdentityClientId = mi_clientId });
             string keyVaultUrl = @"https://kvblobtbldiplom1.vault.azure.net/";
@@ -57,8 +57,8 @@ namespace BlzWApp4.Server.Controllers
             logger.LogInformation("storageAccountKey is OK");
 
             string storageUri = @"https://staccblobtbldiplom2.table.core.windows.net/tableabc1";
-            string tableName = "tableabc1";
-            string accountName = "staccblobtbldiplom2";
+            string tableName = "";
+            string accountName = "";
 
             var tableClient = new TableClient(new Uri(storageUri),
                 tableName,
